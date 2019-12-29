@@ -60,7 +60,10 @@ function UnityProgress (dom) {
 			this.progress = progress; 
 		this.messageArea.style.display = "none";
 		this.progressFrame.style.display = "inline";
-		this.progressBar.style.display = "inline";			
+		this.progressBar.style.display = "inline";
+		if(progress==1){
+			document.getElementByClass("loading").fadeOut(500);
+		}			
 		this.Update();
 	}
 
