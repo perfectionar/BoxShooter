@@ -108,10 +108,6 @@
     </div>
     <script src="jquery-3.0.0.min.js"></script>
     <script type='text/javascript'>
-      $(window).on("load",function(){
-        $(".loading").fadeOut(10000);
-      });
-
       var Module = {
         TOTAL_MEMORY: 268435456,
         errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
@@ -125,6 +121,10 @@
       };
     </script>
     <script src="Release/UnityLoader.js"></script>
-
+    <script>
+      $(window).on("load",function(){
+        $(".loading").fadeOut(500);
+      });
+    </script>
   </body>
 </html>
