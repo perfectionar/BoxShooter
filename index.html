@@ -29,6 +29,10 @@
         position: relative;
       }
 
+      .hide{
+        display: none;
+      }
+      
       .cube1,
       .cube2 {
         background-color: #fafafa;
@@ -94,7 +98,7 @@
   </head>
   <body class="template">
     <!-- ====== Preloader ======  -->
-      <div class="loading">
+      <div class="loading hide">
         <div class="spinner">
           <div class="cube1"></div>
           <div class="cube2"></div>
@@ -124,5 +128,17 @@
       };
     </script>
     <script src="Release/UnityLoader.js"></script>
+    <script type="text/javascript">
+
+    var checkDisplay = setInterval(function(){
+
+    if(Module.progress.progress > 0) {
+        $(".loading").fadeOut(1000);
+        clearInterval(checkDisplay);
+    } else {
+        $(".loading").removeClass('hide');
+    }
+  },100)
+    </script>
     </body>
 </html>
