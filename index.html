@@ -14,12 +14,11 @@
 
       .loading{
         position:fixed;
-        top:0;
-        left:0;
-        height:100%;
-        width:100%;
-        background-color:#000;
-        z-index:9999999999999
+        top:0%;
+        left:25%;
+        height: 50%;
+        width: 50%;
+        z-index:9999999999999;
       }
 
       .spinner {
@@ -28,11 +27,6 @@
         height: 40px;
         position: relative;
       }
-
-      .hide{
-        display: none;
-      }
-      
       .cube1,
       .cube2 {
         background-color: #fafafa;
@@ -98,7 +92,7 @@
   </head>
   <body class="template">
     <!-- ====== Preloader ======  -->
-      <div class="loading hide">
+      <div class="loading">
         <div class="spinner">
           <div class="cube1"></div>
           <div class="cube2"></div>
@@ -129,14 +123,11 @@
     </script>
     <script src="Release/UnityLoader.js"></script>
     <script type="text/javascript">
-
     var checkDisplay = setInterval(function(){
 
     if(Module.progress.progress > 0) {
         $(".loading").fadeOut(1000);
         clearInterval(checkDisplay);
-    } else {
-        $(".loading").removeClass('hide');
     }
   },100)
     </script>
